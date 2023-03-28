@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "aluno.h"
 
 #define MAX_NOME 100
@@ -49,8 +50,15 @@ void ler_dados(Alunos **vetor_aluno, int quantidade_alunos){
 }
 
 void gnomeSort(Alunos **vetor_aluno, int quantidade_alunos){
+    
+    clock_t inicio, fim;
+    double tempoExecucao;
+    inicio = clock();
+
     int posicao = 1;
-    char *temporaria = (char*) malloc (MAX_NOME*sizeof(char));
+    char temporaria = (char) malloc (MAX_NOME*sizeof(char));
+
+
     while(posicao < quantidade_alunos){
         if(strcmp(vetor_aluno[posicao - 1]->nome, vetor_aluno[posicao]->nome) <= 0){
             posicao++;
@@ -63,7 +71,11 @@ void gnomeSort(Alunos **vetor_aluno, int quantidade_alunos){
             }
         }
         free(temporaria);
-    }
+
+        fim = clock();
+        tempoExecucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
+        printf("Tempo de execução em segundos %.5f\n", tempoExecucao);
+}
 
 void arquivo(Alunos **vetor_aluno, int quantidade_alunos){
     FILE *arquivo;
