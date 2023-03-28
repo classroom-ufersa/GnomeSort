@@ -55,27 +55,34 @@ void gnomeSort(Alunos **vetor_aluno, int quantidade_alunos){
     double tempoExecucao;
     inicio = clock();
 
-    int posicao = 1;
-    char temporaria = (char) malloc (MAX_NOME*sizeof(char));
-
-
-    while(posicao < quantidade_alunos){
+    int posicao = 1; //1 vez: C1
+    char temporaria = (char) malloc (MAX_NOME*sizeof(char)); //1 vez: C2
+    while(posicao < quantidade_alunos){ //n vezes: C3*n
         if(strcmp(vetor_aluno[posicao - 1]->nome, vetor_aluno[posicao]->nome) <= 0){
-            posicao++;
+            posicao++; //n² vezes: C4*n²
         } else{
             strcpy(temporaria, vetor_aluno[posicao-1]->nome);
             strcpy(vetor_aluno[posicao - 1]->nome, vetor_aluno[posicao]->nome);
             strcpy(vetor_aluno[posicao]->nome, temporaria);
             posicao--;
-            posicao = (posicao==0) ? 1 : posicao;
+            posicao = (posicao==0) ? 1 : posicao; //n² vezes: C5*n²
             }
         }
-        free(temporaria);
+        free(temporaria); //1 vez: C6
 
         fim = clock();
         tempoExecucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
         printf("Tempo de execução em segundos %.5f\n", tempoExecucao);
 }
+
+/*
+C1+C2+C3*n+C4*n²+C5*n²+C6
+C4*n²+C5*n²+C3*n+C1+C2+C6
+T(n) an²+bn+c = Tempo de execução quadrática
+
+Notação big-O
+T(n) = O(n²)
+*/
 
 void arquivo(Alunos **vetor_aluno, int quantidade_alunos){
     FILE *arquivo;
