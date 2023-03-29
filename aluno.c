@@ -55,18 +55,18 @@ void gnomeSort(Alunos **vetor_aluno, int quantidade_alunos){
     int posicao = 1; //1 vez: C1
     Alunos *temporaria = (Alunos*) malloc (MAX_NOME*sizeof(Alunos)); //1 vez: C2
     if (temporaria == NULL) {
-        printf("Erro ao alocar memoria.\n");
+        printf("Erro ao alocar memoria.\n"); //1 vez: C3
         exit(1);
     }
-    while(posicao < quantidade_alunos){ //n vezes: C3*n
+    while(posicao < quantidade_alunos){ //n vezes: C4*n
         if(strcmp(vetor_aluno[posicao - 1]->nome, vetor_aluno[posicao]->nome) <= 0){
-            posicao++; //n² vezes: C4*n²
+            posicao++; //n² vezes: C5*n²
         } else{
             temporaria = vetor_aluno[posicao - 1];
             vetor_aluno[posicao - 1] = vetor_aluno[posicao];
             vetor_aluno[posicao] = temporaria;
             posicao--;
-            posicao = (posicao==0) ? 1 : posicao; //n² vezes: C5*n²
+            posicao = (posicao==0) ? 1 : posicao; //n² vezes: C6*n²
             }
         }
 
@@ -76,8 +76,8 @@ void gnomeSort(Alunos **vetor_aluno, int quantidade_alunos){
 }
 
 /*
-C1+C2+C3*n+C4*n²+C5*n²
-C4*n²+C5*n²+C3*n+C1+C2
+C1+C2+C3+C4*n+C5*n²+C6*n²
+C5*n²+C5*n²+C4*n+C1+C2+C3
 T(n) an²+bn+c = Tempo de execução quadrática
 Notação big-O
 T(n) = O(n²)
