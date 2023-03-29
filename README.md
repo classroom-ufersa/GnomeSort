@@ -2,8 +2,6 @@
 
 O Gnome Sort é um algoritmo de ordenação que busca ordenar elementos que estejam desordenados, ele percorre um vetor seja de strings ou de números para comparar, se o elemento atual vier depois, troca a posição, caso contrário, permanece no lugar.
 
-O Gnome Sort é um algoritmo fácil de implementar, ele só precisa de um laço de repetição While, é necessário para ser executado até que a posição atual chegue ao final do vetor, e algumas operações para fazer a troca de elementos, como o If, para comparar se o elemento na sua posição é maior ou igual ao elemento na posição anterior. O Gnome Sort pode ser útil se tiver poucos elementos no vetor para ordenar, facilita quando alguns elementos já estão em sua posição correta. Porém, se tiver muitos elementos para ordenar, o tempo de execução pode ser mais lento.
-
 ##
 
 # Execução
