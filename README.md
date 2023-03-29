@@ -11,3 +11,13 @@ Para executar esse código o usuário pode digitar no terminal “gcc main.c -o 
 # Complexidade
 
 O Gnome Sort tem uma complexidade O(n²), n é o número de elementos que vão ser ordenados, por isso que o tempo de execução pode ser um pouco lento, dependendo da ordenação a ser feita. No pior caso cada elemento precisa ser comparado com todos os elementos anteriores para alcançar sua posição correta, que seria n*(n-1). Já no melhor caso ele tem uma complexidade O(n), que é quando o vetor já está ordenado e não precisa fazer troca de posições.
+
+# Vantagens
+
+O Gnome Sort pode ser útil se tiver poucos elementos no vetor para ordenar;
+O Gnome Sort precisa de pouco espaço na memória.
+
+# Desvantagens
+
+O Gnome Sort pode ter uma eficiência baixa se a ordenação que precisa ser feita for complexa; 
+O Gnome Sort não se adapta a listas que já tem ordenada, ele executa o mesmo número de comparações e trocas.
