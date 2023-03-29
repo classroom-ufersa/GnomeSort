@@ -21,7 +21,7 @@ int main (void){
             exit(1);
         }
     }
-    printf("Deseja criar um novo arquivo para inserir os dados dos alunos?\n");
+    printf("Deseja criar um arquivo para inserir os dados dos alunos?\n");
     printf("1-SIM\t\t\t\t2-NÃO\n\t\t");
     scanf("%li", &limpar);
     getchar();
