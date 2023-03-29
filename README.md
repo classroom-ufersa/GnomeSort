@@ -14,10 +14,10 @@ O Gnome Sort tem uma complexidade O(n²), n é o número de elementos que vão s
 
 # Vantagens
 
-O Gnome Sort pode ser útil se tiver poucos elementos no vetor para ordenar;
+O Gnome Sort pode ser útil se tiver poucos elementos no vetor para ordenar;                                                                                     
 O Gnome Sort precisa de pouco espaço na memória.
 
 # Desvantagens
 
-O Gnome Sort pode ter uma eficiência baixa se a ordenação que precisa ser feita for complexa; 
+O Gnome Sort pode ter uma eficiência baixa se a ordenação que precisa ser feita for complexa;                                                                
 O Gnome Sort não se adapta a listas que já tem ordenada, ele executa o mesmo número de comparações e trocas.
