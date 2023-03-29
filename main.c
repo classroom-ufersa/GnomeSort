@@ -23,7 +23,7 @@ int main (void){
     }
     printf("Deseja criar um arquivo para inserir os dados dos alunos?\n");
     printf("1-SIM\t\t\t\t2-NÃO\n\t\t");
-    scanf("%li", &limpar);
+    scanf("%lu", &limpar);
     getchar();
     printf("\n\n");
     if(limpar == 1){
