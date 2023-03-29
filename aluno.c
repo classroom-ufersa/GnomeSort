@@ -41,6 +41,7 @@ void ler_dados(Alunos **vetor_aluno, int quantidade_alunos){
             getchar();
         } else{
             printf("Opção inválida");
+            exit(1);
         }
         printf("\n");
     }
