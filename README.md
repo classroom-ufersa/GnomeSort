@@ -6,7 +6,7 @@ O Gnome Sort é um algoritmo de ordenação que busca ordenar elementos que este
 
 # Execução
 
-O programa feito serve para ordenar strings com o algoritmo de ordenação Gnome Sort, ele ordena em ordem alfabética os nomes dos alunos matriculados. O Gnome Sort compara as letras, se o elemento estiver em sua posição correta o Gnome Sort passa para o próximo elemento, se não estiver em sua posição correta ele troca o elemento com o anterior, e repete esse processo até achar a ordem correta de todos. Para executar esse código o usuário pode digitar no terminal “gcc main.c -o main” dar enter e digitar “./main”, tanto para linux quanto para windows. Depois de realizar esses dois passos o programa irá compilar pedindo ao usuário para digitar se ele quer abrir um arquivo para inserir os alunos, logo após pede o nome do aluno, a matrícula, qual documento o usuário deseja inserir, e pede o número desse documento, e ordena no arquivo em ordem alfabética.
+Para executar esse código o usuário pode digitar no terminal “gcc main.c -o main” dar enter e digitar “./main”, tanto para linux quanto para windows. Depois de realizar esses dois passos o programa irá compilar pedindo ao usuário para digitar se ele quer abrir um arquivo para inserir os alunos, logo após pede o nome do aluno, a matrícula, qual documento o usuário deseja inserir, e pede o número desse documento, e ordena no arquivo em ordem alfabética.
 
 # Complexidade
 
