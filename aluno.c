@@ -76,7 +76,7 @@ void gnomeSort(Alunos **vetor_aluno, int quantidade_alunos){
 
         fim = clock();
         tempoExecucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
-        printf("Tempo de execução em segundos %.5f\n", tempoExecucao);
+        printf("Tempo de execução em segundos %f\n", tempoExecucao);
 }
 
 /*
