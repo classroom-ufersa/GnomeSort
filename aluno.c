@@ -21,10 +21,6 @@ struct aluno{
 void ler_dados(Alunos **vetor_aluno, int quantidade_alunos){
     int index;
     size_t escolha;
-    if(vetor_aluno == NULL){
-        printf("ERRO!");
-        exit(1);
-    }
     for(index = 0; index < quantidade_alunos ; index++){
         printf("Informe o nome do %iº aluno:\t", index+1);
         fgets(vetor_aluno[index]->nome,MAX_NOME,stdin);
@@ -36,7 +32,7 @@ void ler_dados(Alunos **vetor_aluno, int quantidade_alunos){
         printf("Escolha uma das opções de documento:\t");
         printf("1-RG\t\t\t\t2-CPF\n");
         printf("\t\t\t\t\t");
-        scanf("%li", &escolha);
+        scanf("%lu", &escolha);
         getchar();
         printf("\n");
         if((escolha == 1) || (escolha == 2)){
