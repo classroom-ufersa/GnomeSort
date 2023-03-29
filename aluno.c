@@ -5,7 +5,7 @@
 #include "aluno.h"
 
 #define MAX_NOME 100
-#define MAX_ALUNO 30
+#define MAX_ALUNO 100
 
 union docs{
     int CPF;
