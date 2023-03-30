@@ -21,3 +21,7 @@ O Gnome Sort precisa de pouco espaço na memória.
 
 O Gnome Sort pode ter uma eficiência baixa se a ordenação que precisa ser feita for complexa;                                                                
 O Gnome Sort não se adapta a listas que já tem ordenada, ele executa o mesmo número de comparações e trocas.
+##
+# Link do vídeo da explicação do código
+
+https://youtu.be/PH-MbhhjaoA
